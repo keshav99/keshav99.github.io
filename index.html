@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tiny.css">
     <title>Hey</title>
 
     <script src="js/lib/greensock/TweenMax.min.js"></script>
@@ -16,30 +17,46 @@
     <script src="lib/scrollmagic/minified/ScrollMagic.min.js"></script>
     <script src="lib/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
     <script src="lib/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+    <script src="js/script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
   </head>
   <body>
     <div class="container">
-      <section class= "panel blue">
+      <div class="top-bar">
+        <img src="img/photo.jpg">
+        <ul>
+          <li><a href="#contact">CONTACT</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#portfolio">PORTFOLIO</a></li>
+          <li><a href="#about">ABOUT</a></li>
+        </ul>
+      </div>
+      <section class= "panel blue" id="about">
         <img id="bg" src="img/hello.jpg">
         <img id="light" src="img/light.png">
         <img id="zelight" src="img/zelight.png">
-        <h1 class="container-intro">HELLO FRIEND</h1>
-        <h4 class="container-intro2">Scroll Down to see magic</h4>
+        <h1>Hello</h1>
+        <!-- <div class="container-intro">HELLO FRIEND</div> -->
+        <div class="container-intro2">Scroll Down To Know Me</div>
       </section>
-      <section class= "panel turquoise">
-        <b>turq</b>
+      <section class= "panel turquoise" id="portfolio">
+        <div class="cover"></div>
       </section>
-      <section class= "panel green">
+      <section id="skills"class= "panel green">
         <b>green</b>
       </section>
-      <section class= "panel bordeaux">
+      <section class= "panel bordeaux" id="contact">
         <b>bored</b>
       </section>
 
     </div>
       <script>
+       
+        $("#nav-container").hover(function() {
+            // console.log('umm');
+          $('#nav-container').toggleClass("pushed");
+        });
       var controller = new ScrollMagic.Controller();
 
       new ScrollMagic.Scene({
@@ -59,7 +76,7 @@
   								})
   								.setTween(
                     new TimelineMax()
-                    .fromTo(".container-intro", 1, {y: "40vh", opacity: "0"}, {y: "0vh", opacity: "1", ease: Linear.easeIn})
+                    .fromTo(".container-intro", 1, {y: "-280vh", opacity: "0"}, {y: "-300vh", opacity: "1", ease: Linear.easeIn})
                   ) // trigger a TweenMax.to tween
   								// .addIndicators({name: "1 (duration: 0.5)"}) // add indicators (requires plugin)
   								.addTo(controller);
@@ -69,7 +86,7 @@
                               })
                               .setTween(
                                 new TimelineMax()
-                                .fromTo(".container-intro2", 1, {y: "60vh", opacity: "0"}, {y: "40vh", opacity: "1", delay: "2", ease: Linear.easeIn})
+                                .fromTo(".container-intro2", 1, {y: "250vh", opacity: "0"}, {y: "225vh", opacity: "0.5", delay: "2", ease: Linear.easeIn})
                               ) // trigger a TweenMax.to tween
                               // .addIndicators({name: "1 (duration: 0.5)"}) // add indicators (requires plugin)
                               .addTo(controller);
@@ -78,9 +95,9 @@
       var wipeAnimation = new TimelineMax()
         .add([TweenMax.fromTo("section.panel.blue img#bg",    1, {scale:1, autoalpha:0.05}, {scale:1.05, ease: Linear.easeNone}),  // in from right      
         TweenMax.fromTo("section.panel.blue img#light, section.panel.blue img#zelight", 1, {bottom: 0, autoalpha: 0.3}, {bottom:"50%", ease: Linear.easeNone}),
-        TweenMax.fromTo("section.panel.turquoise", 1, {y: "100%", autoalpha: 0.3}, {y: "50%", ease: Linear.easeNone})])  // in from left
-  			.fromTo("section.panel.green",    1, {x:  "150%"}, {x: "0%", ease: Linear.easeNone})  // in from right
-  			.fromTo("section.panel.bordeaux", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone}); // in from top
+        TweenMax.fromTo("#portfolio", 1, {y: "100%", autoalpha: 0.3}, {y: "50%", ease: Linear.easeNone})])  // in from left
+  			.fromTo("#skills",    1, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
+  			.fromTo("#contact", 1, {y: "100%"}, {y: "50%", ease: Linear.easeNone}); // in from top
 
   		// create scene to pin and link animation
   		new ScrollMagic.Scene({
@@ -91,7 +108,24 @@
   			.setPin(".container")
   			.setTween(wipeAnimation)
   			// .addIndicators() // add indicators (requires plugin)
-  			.addTo(controller);
+        .addTo(controller);
+        
+        $(document).on("click", "a[href^=#]", function(e) {
+        var id = $(this).attr("href");
+        console.log(id);
+        if($(id).length > 0) {
+          e.preventDefault();
+
+          // trigger scroll
+          controller.scrollTo(id);
+
+          // If supported by the browser we can also update the URL
+          if (window.history && window.history.pushState) {
+            history.pushState("", document.title, id);
+          }
+        }
+
+      });
       </script>
 
     </div>
