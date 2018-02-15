@@ -18,10 +18,14 @@
     <script src="lib/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
     <script src="lib/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
+    
 
   </head>
   <body>
+      <div class="se-pre-con"></div>
     <div class="container">
       <div class="top-bar">
         <img src="img/photo.jpg">
@@ -36,8 +40,12 @@
         <img id="bg" src="img/hello.jpg">
         <img id="light" src="img/light.png">
         <img id="zelight" src="img/zelight.png">
-        <h1>Hello</h1>
-        <!-- <div class="container-intro">HELLO FRIEND</div> -->
+        <div class="container-intro">Hi, I'm Keshav!</div>
+        <div class="container-intro-middle">A software developer pursuing my 2nd year in Btech Computer Science(spec. in Information Security) at VIT University.  
+          <br>
+          <br>
+          <a href="https://github.com/keshav99" class=" github btn btn-5">Check Out My Github Handle</a> 
+        </div>
         <div class="container-intro2">Scroll Down To Know Me</div>
       </section>
       <section class= "panel turquoise" id="portfolio">
@@ -52,7 +60,10 @@
 
     </div>
       <script>
-       
+       $(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
         $("#nav-container").hover(function() {
             // console.log('umm');
           $('#nav-container').toggleClass("pushed");
@@ -66,6 +77,12 @@
       .addTo(controller);
 
       new ScrollMagic.Scene({
+        triggerElement: ".container-intro-middle"
+      })
+      .setPin(".container-intro-middle")
+      .addTo(controller);
+
+      new ScrollMagic.Scene({
         triggerElement: ".container-intro2"
       })
       .setPin(".container-intro2")
@@ -76,7 +93,17 @@
   								})
   								.setTween(
                     new TimelineMax()
-                    .fromTo(".container-intro", 1, {y: "-280vh", opacity: "0"}, {y: "-300vh", opacity: "1", ease: Linear.easeIn})
+                    .fromTo(".container-intro", 1, {y: "-150vh", opacity: "0"}, {y: "-170vh", delay: 1, opacity: "1", ease: Linear.easeIn})
+                  ) // trigger a TweenMax.to tween
+  								// .addIndicators({name: "1 (duration: 0.5)"}) // add indicators (requires plugin)
+                  .addTo(controller);
+      
+      new ScrollMagic.Scene({
+  									triggerElement: ".container-intro-middle"
+  								})
+  								.setTween(
+                    new TimelineMax()
+                    .fromTo(".container-intro-middle", 1, {y: "-50vh", opacity: "0"}, {y: "-70vh", delay: 3, opacity: "1", ease: Linear.easeIn})
                   ) // trigger a TweenMax.to tween
   								// .addIndicators({name: "1 (duration: 0.5)"}) // add indicators (requires plugin)
   								.addTo(controller);
@@ -86,7 +113,7 @@
                               })
                               .setTween(
                                 new TimelineMax()
-                                .fromTo(".container-intro2", 1, {y: "250vh", opacity: "0"}, {y: "225vh", opacity: "0.5", delay: "2", ease: Linear.easeIn})
+                                .fromTo(".container-intro2", 1, {y: "250vh", opacity: "0"}, {y: "225vh", opacity: "0.5", delay: "4", ease: Linear.easeIn})
                               ) // trigger a TweenMax.to tween
                               // .addIndicators({name: "1 (duration: 0.5)"}) // add indicators (requires plugin)
                               .addTo(controller);
@@ -94,9 +121,10 @@
         // define movement of panels
       var wipeAnimation = new TimelineMax()
         .add([TweenMax.fromTo("section.panel.blue img#bg",    1, {scale:1, autoalpha:0.05}, {scale:1.05, ease: Linear.easeNone}),  // in from right      
-        TweenMax.fromTo("section.panel.blue img#light, section.panel.blue img#zelight", 1, {bottom: 0, autoalpha: 0.3}, {bottom:"50%", ease: Linear.easeNone}),
-        TweenMax.fromTo("#portfolio", 1, {y: "100%", autoalpha: 0.3}, {y: "50%", ease: Linear.easeNone})])  // in from left
-  			.fromTo("#skills",    1, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
+        TweenMax.fromTo("section.panel.blue img#light, section.panel.blue img#zelight", 1, {bottom: 0, autoalpha: 0.1}, {bottom:"50%", ease: Linear.easeNone}),
+        TweenMax.fromTo("#portfolio", 1, {y: "100%", autoalpha: 0.1}, {y: "50%", ease: Linear.easeNone}),
+        TweenMax.fromTo(".container-intro2, .container-intro, .container-intro-middle", 1, {scale:1, autoalpha: 0.005}, {scale: 0, ease: Linear.easeNone})])  // in from left
+  			.fromTo("#skills",    1, {x:  "150%"}, {x: "0%", ease: Linear.easeNone})  // in from right
   			.fromTo("#contact", 1, {y: "100%"}, {y: "50%", ease: Linear.easeNone}); // in from top
 
   		// create scene to pin and link animation
@@ -126,6 +154,7 @@
         }
 
       });
+      
       </script>
 
     </div>
