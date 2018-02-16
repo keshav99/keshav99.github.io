@@ -203,6 +203,8 @@ body{
   border-bottom: 1px solid #e5e5e5;
 }
 
+
+
 .exp-box img{
   width: 75px;
   float: right;
@@ -249,8 +251,36 @@ body{
     font-size: 1.6em;
   }
 
+    .exp-box h3{
+      font-size: 2em;
+    }
+    .exp-box h4{
+      font-size: 1.6em;
+      margin-top:10px;
+    }
+    .exp-box h5{
+      font-size: 1.4em;
+      margin-top:30px;
+    }
+    
+    .exp-box h6{
+      font-size: 1.2em;
+      margin-top:10px;
 
-  .container-intro2{
-    /* font-size: 0.6em; */
-  }
+    }
+
+    .col-xs-12{
+      margin-bottom: 100px;
+    }
+
+    .projects .exp-box h3{
+      font-size: 2em;
+      margin-top: 30px;
+    }
+    
+    .projects .exp-box h5{
+      font-size: 1.2em;
+      margin-top:30px;
+
+    }
 }
