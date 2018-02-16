@@ -144,7 +144,7 @@
     text-shadow: none;
     -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
     transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-    color: #b8a3a8;
+    color: #ffcaca;
   }
   
   .btn-5:hover {

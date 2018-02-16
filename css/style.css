@@ -81,8 +81,21 @@ body{
 }
 
 .panel.green{
-  background: green;
+  background: rgba(153, 108, 108, 0.95);
   z-index: 3;
+}
+
+.green h2{
+  text-align: center;
+  padding: 20px;
+  font-weight: bolder;
+}
+
+.green h3{
+  padding: 20px;
+  color: #fff;
+  margin-right:50%;
+  font-size: 1.2em;
 }
 
 .panel.turquoise{
@@ -201,6 +214,13 @@ body{
 .exp-box{
   padding: 5vh 10px 2.5vh 10px;
   border-bottom: 1px solid #e5e5e5;
+  transition: all 1s ease;
+}
+
+.exp-box:hover{
+  background: #725b5b;
+  cursor: pointer;
+  padding-left:20px;
 }
 
 
@@ -230,6 +250,38 @@ body{
   padding-top: 10px;
 }
 
+.holder{
+  width: 30%;
+}
+
+
+.col-lg-1 h4{
+  font-size:0.8em;
+  font-weight: 100;
+  text-align: center;
+  margin-top:10px;
+  width: 100%;
+  
+  float: left;
+
+  
+}
+
+.col-lg-1 img{
+  height: 100px;
+  width: 100px;
+  float: left;
+  border-radius: 20px;
+}
+
+.col-lg-1{
+  float: left;
+  margin: 0 5% 0 15%;
+}
+
+.col-lg-1 .start{
+  margin-left: -200% !important;
+}
 
 @media (max-width: 1024px){
   .panel.turquoise{
@@ -253,6 +305,7 @@ body{
 
     .exp-box h3{
       font-size: 2em;
+      margin-top: -30px;
     }
     .exp-box h4{
       font-size: 1.6em;
@@ -267,6 +320,19 @@ body{
       font-size: 1.2em;
       margin-top:10px;
 
+    }
+    .exp-box img{
+      width: 150px;
+      margin-top: -150px;
+    }
+
+    .portfool h2{
+      font-size: 2em;
+    }
+
+    .portfool img{
+      width: 80px;
+      margin-right: 80px;
     }
 
     .col-xs-12{

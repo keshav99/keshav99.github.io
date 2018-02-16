@@ -95,7 +95,77 @@
         </div>
       </section>
       <section id="skills"class= "panel green">
-        <b>green</b>
+        <h2>Skills</h2>
+        <h3>Web Development</h3>
+        <div class="row">
+          <div class="col-lg-6 col-xs-12">
+            <div class="col-lg-1 col-md-3 start">
+                <img src="img/js.png" alt="">
+                <h4>Javascript</h4>
+            </div>
+            
+            <div class="col-lg-1 col-md-3">
+                <img src="img/jquery.png" alt="">
+                <h4>JQuery</h4>
+            </div><div class="col-lg-1 col-md-3">
+                <img src="img/angular.png" alt="">
+                <h4>AngularJS</h4>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xs-12">
+              <div class="col-lg-1 col-md-3">
+                  <img src="img/react.png" alt="">
+                  <h4>ReactJS</h4>
+              </div><div class="col-lg-1 col-md-3">
+                  <img src="img/bootstrap.png" alt="">
+                  <h4>Bootstrap</h4>
+              </div><div class="col-lg-1 col-md-3">
+                  <img src="img/electron.jpg" alt="">
+                  <h4>ElectronJS</h4>
+              </div>
+          </div>
+          <h3>Android App Development</h3>
+          <div class="col-lg-6 col-xs-12">
+            <div class="col-lg-1 col-md-3">
+              <img src="img/android.png" alt="">
+              <h4>Android Studio</h4>
+            </div>
+            <div class="col-lg-1 col-md-3">
+                <img src="img/reactnative.png" alt="">
+                <h4>ReactNative</h4>
+            </div>
+          </div>
+          <h3>Other Technologies</h3>
+          <div class="col-lg-6 col-xs-12">
+              <div class="col-lg-1 col-md-3">
+                  <img src="img/python.png" alt="">
+                  <h4>Python</h4>
+              </div>
+              <div class="col-lg-1 col-md-3">
+                  <img src="img/raspi.png" alt="">
+                  <h4>RaspberryPi</h4>
+              </div>
+              <div class="col-lg-1 col-md-3">
+                  <img src="img/c++.png" alt="">
+                  <h4>C++</h4>
+              </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+              <div class="col-lg-1 col-md-3">
+                  <img src="img/sql.svg" alt="">
+                  <h4>SQL</h4>
+              </div>
+              <div class="col-lg-1 col-md-3">
+                  <img src="img/csharp.png" alt="">
+                  <h4>C#</h4>
+              </div>
+              <div class="col-lg-1 col-md-3">
+                  <!-- <img src="img/c++.png" alt=""> -->
+                  <h4></h4>
+              </div>
+          </div>
+        </div>
+        
       </section>
       <section class= "panel bordeaux" id="contact">
         <b>bored</b>
@@ -168,11 +238,12 @@
         var wipeAnimation = new TimelineMax()
           .add([TweenMax.fromTo("section.panel.blue img#bg",    1, {scale:1, autoalpha:0.05}, {scale:1.05, ease: Linear.easeNone}),  // in from right      
           TweenMax.fromTo("section.panel.blue img#light, section.panel.blue img#zelight", 1, {bottom: 0, autoalpha: 0.1}, {bottom:"60%", ease: Linear.easeNone}),
-          TweenMax.fromTo("#portfolio", 1, {y: "100%", autoalpha: 0.1}, {y: "40%", ease: Linear.easeNone}),
+          TweenMax.fromTo("section.panel.blue img#zelight", 2, {opacity: 0.5, autoalpha: 0.1}, {opacity:0, ease: Linear.easeNone}),
+          TweenMax.fromTo("#portfolio", 1, {y: "100%",  autoalpha: 0.1}, {y: "40%", ease: Linear.easeNone}),
           TweenMax.fromTo(".container-intro", 1, {x: "0%", autoalpha: 1}, {x: "200%", ease: Linear.easeNone}),
           TweenMax.fromTo(".container-intro-middle", 1, {x: "0%", autoalpha: 1}, {x: "100%", ease: Linear.easeNone}),
           TweenMax.fromTo(".container-intro2", 1, {scale:1, autoalpha: 0.005}, {scale: 0, ease: Linear.easeNone})])  // in from left
-          .fromTo("#skills",    3, {x:  "200%"}, {x: "0%", ease: Linear.ease})  // in from right
+          .fromTo("#skills",    2, {x:  "200%"}, {x: "0%", ease: Linear.ease})  // in from right
           .fromTo("#contact", 1, {y: "100%"}, {y: "50%", ease: Linear.easeNone}); // in from top
           new ScrollMagic.Scene({
   				triggerElement: ".container-fluid",
