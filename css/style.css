@@ -360,6 +360,11 @@ body{
     width: 100%;
     font-size: 1.6em;
   }
+  .bordeaux ul, .bordeaux li{
+    left:-20%;
+    transform: translateX(50%);
+    margin: 0;
+  }
 
     .exp-box h3{
       font-size: 2em;
