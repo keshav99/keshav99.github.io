@@ -338,9 +338,9 @@
                               .addTo(controller);
 
         var wipeAnimation = new TimelineMax()
-           .add([TweenMax.fromTo("section.panel.blue img#bg",    3, {scale:1, autoalpha:0.05}, {scale:1.5, ease: Linear.easeNone}),  // in from right      
-           TweenMax.fromTo("section.panel.blue img#light, section.panel.blue img#zelight", 3, {bottom: 0, autoalpha: 0.1}, {bottom:"100%", ease: Linear.easeNone}),
-           TweenMax.fromTo("section.panel.blue img#zelight", 2, {opacity: 0.5, autoalpha: 0.1}, {opacity:0, ease: Linear.easeNone}),
+          //  .add([TweenMax.fromTo("section.panel.blue img#bg",    3, {scale:1, autoalpha:0.05}, {scale:1.5, ease: Linear.easeNone}),  // in from right      
+          //  TweenMax.fromTo("section.panel.blue img#light, section.panel.blue img#zelight", 3, {bottom: 0, autoalpha: 0.1}, {bottom:"100%", ease: Linear.easeNone}),
+          //  TweenMax.fromTo("section.panel.blue img#zelight", 2, {opacity: 0.5, autoalpha: 0.1}, {opacity:0, ease: Linear.easeNone}),
           TweenMax.fromTo("#portfolio", 3, {y: "100%", autoalpha: 1}, {y: "0%", ease: Linear.easeNone}),
           TweenMax.fromTo(".container-intro", 1, { autoalpha: 1}, {y: "-300%", ease: Linear.easeNone}),
           TweenMax.fromTo(".container-intro-middle", 1, {autoalpha: 1}, {y: "-300%", ease: Linear.easeNone}),
