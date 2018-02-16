@@ -204,29 +204,33 @@ body{
   transform: rotateZ(360deg);
 }
 
-.exp-box h3{
+a .exp-box{
+  color: #fff;
+}
+
+a .exp-box h3{
   font-size: 1em;
   font-weight: 600;
 }
 
-.exp-box h4{
+a .exp-box h4{
   font-size: 0.8em;
 }
-.exp-box h5{
+a .exp-box h5{
   font-size: 0.7em;
 }
 
-.exp-box h6{
+a .exp-box h6{
   font-size: 0.6em;
 }
 
-.exp-box{
+a .exp-box{
   padding: 5vh 10px 2.5vh 10px;
   border-bottom: 1px solid #e5e5e5;
   transition: all 1s ease;
 }
 
-.exp-box:hover{
+a .exp-box:hover{
   background: #725b5b;
   cursor: pointer;
   padding-left:20px;
@@ -234,7 +238,7 @@ body{
 
 
 
-.exp-box img{
+a .exp-box img{
   width: 75px;
   float: right;
   margin-top: -100px;
@@ -242,11 +246,11 @@ body{
   border-radius: 200px;
 }
 
-.projects .exp-box h3{
+.projects a .exp-box h3{
   font-size: 1em;
 }
 
-.projects .exp-box h5{
+.projects a .exp-box h5{
   font-size: 0.6em;
 }
 
@@ -255,7 +259,7 @@ body{
   padding: 0 0 0 5vh;
 }
 
-.projects .exp-box {
+.projects a .exp-box {
   padding-top: 10px;
 }
 
@@ -354,6 +358,13 @@ body{
   .panel.bordeaux{
     top:335%;
   }
+
+  .bordeaux ul{
+    width: 100%;
+    
+    
+  }
+
   .top-bar ul li, .top-bar ul li a{
     font-size: 1.1em;
     margin-right: 10%;
@@ -377,31 +388,26 @@ body{
   .container-intro2{
     font-size: 1.5em;
   }
-  .bordeaux ul, .bordeaux li{
-    left:-20%;
-    transform: translateX(50%);
-    margin: 0;
-  }
 
-    .exp-box h3{
+    a .exp-box h3{
       font-size: 2em;
       margin-top: -30px;
     }
-    .exp-box h4{
+    a .exp-box h4{
       font-size: 1.6em;
       margin-top:10px;
     }
-    .exp-box h5{
+    a .exp-box h5{
       font-size: 1.4em;
       margin-top:30px;
     }
     
-    .exp-box h6{
+    a .exp-box h6{
       font-size: 1.2em;
       margin-top:10px;
 
     }
-    .exp-box img{
+    a .exp-box img{
       width: 150px;
       margin-top: -150px;
     }
@@ -419,12 +425,12 @@ body{
       margin-bottom: 100px;
     }
 
-    .projects .exp-box h3{
+    .projects a .exp-box h3{
       font-size: 2em;
       margin-top: 30px;
     }
     
-    .projects .exp-box h5{
+    .projects a .exp-box h5{
       font-size: 1.2em;
       margin-top:30px;
 
@@ -452,6 +458,23 @@ body{
       height:200px;
       margin-bottom: 40px;
     }
+
+    
+  .bordeaux ul{
+    left:-20%;
+    transform: translateX(50%, 50%);
+    margin: 0;
+    width: 80vw;
+  }
+
+  .bordeaux ul li {
+    width: 10vw;
+    height:10vw;
+    line-height: 10vw;
+    font-size: 50px;
+    
+  }
+
 
     
 }
