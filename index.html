@@ -8,19 +8,14 @@
     <title>Hey</title>
 
     <script src="js/lib/greensock/TweenMax.min.js"></script>
-    <script src="js/lib/greensock/plugins/ScrollToPlugin.min.js"></script>
     <script src="js/lib/jquery.min.js"></script>
-    <script src="js/lib/modernizr.custom.min.js"></script>
     <script src="js/TimelineLite.min.js"></script>
     <script src="js/TimelineMax.min.js"></script>
     <script src="js/jquery.gsap.min.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="js/lib/iscroll-probe.js"></script>
     <script src="lib/scrollmagic/minified/ScrollMagic.min.js"></script>
     <script src="lib/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
-    <script src="lib/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
     <script src="https://use.fontawesome.com/8416ea41ee.js"></script>
@@ -28,7 +23,56 @@
 
   </head>
   <body>
-      <div class="se-pre-con"></div>
+      <div class="se-pre-con">
+          <svg width="700" height="200" viewBox="0 0 400 200" style="left: 50px; top: 10px; position: absolute;">
+              <defs>
+                  <filter id="goo">
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="13" result="blur"></feGaussianBlur>
+                      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 17 -4" result="cm"></feColorMatrix>
+                  </filter>
+              </defs>
+              <g filter="url(#goo)" style="fill:#FFFFFF">
+                  <ellipse id="drop" cx="40" cy="90" rx="50" ry="50" opacity="1" fill="#5D8091">
+                      <animate id="dropcx" xlink:href="#drop" attributeName="cx" begin="0s; dropcx2.end"
+                         from="40" to="200" dur="1s"/>
+                      <animate id="dropcx3" xlink:href="#drop" attributeName="cx" begin="dropcx.end"
+                         from="200" to="359" dur="1s" />
+                      <animate id="dropcx4" xlink:href="#drop" attributeName="cx" begin="dropcx3.end"
+                         from="359" to="200" dur="1s" />
+                      <animate id="dropcx2" xlink:href="#drop" attributeName="cx" begin="dropcx4.end"
+                         from="200" to="40" dur="1s" />
+                      <animate id="dropopacity" attributeType="CSS" attributeName="opacity" begin="0s; dropopacity2.end"
+                         from="1" to="0" dur="1s"/>
+                      <animate id="dropopacity2" attributeType="CSS" attributeName="opacity" begin="dropopacity.end"
+                         from="0" to="1" dur="1s" />
+                  </ellipse>
+                  <ellipse id="drop3" cx="359" cy="90" rx="50" ry="50" opacity="1" fill="#A4D6C9">
+                      <animate id="drop3cx" xlink:href="#drop3" attributeName="cx" begin="0s; drop3cx2.end"
+                         from="359" to="200" dur="1s" />
+                      <animate id="drop3cx3" xlink:href="#drop3" attributeName="cx" begin="drop3cx.end"
+                         from="200" to="40" dur="1s" />
+                      <animate id="drop3cx4" xlink:href="#drop3" attributeName="cx" begin="drop3cx3.end"
+                         from="40" to="200" dur="1s" />
+                      <animate id="drop3cx2" xlink:href="#drop3" attributeName="cx" begin="drop3cx4.end"
+                         from="200" to="359" dur="1s" />
+                      <animate id="drop3opacity" attributeType="CSS" attributeName="opacity" begin="0s; drop3opacity2.end"
+                         from="1" to="0" dur="1s" />
+                      <animate id="drop3opacity2" attributeType="CSS" attributeName="opacity" begin="drop3opacity.end"
+                         from="0" to="1" dur="1s" />
+                  </ellipse>
+                  <ellipse id="drop2" cx="200" cy="90" rx="50" ry="50" opacity="1" fill="#E67270" style="z-index: 9999;">
+                      <animate id="drop2opacity" attributeType="CSS" attributeName="opacity" begin="0s; drop2opacity2.end"
+                         from="1" to="0.5" dur="1s" />
+                      <animate id="drop2opacity2" attributeType="CSS" attributeName="opacity" begin="drop2opacity.end"
+                         from="0.5" to="1" dur="1s" />
+                      <animate id="drop2fill" attributeType="CSS" attributeName="fill" begin="0s; drop2fill2.end"
+                         from="#E67270" to="#b37d77" dur="1s" />
+                      <animate id="drop2fill2" attributeType="CSS" attributeName="fill" begin="drop2fill.end"
+                         from="#b37d77" to="#E67270" dur="1s" />
+                  </ellipse>
+              </g>
+          </svg>
+      </div>
     <div class="container-fluid">
       <div class="top-bar">
         <img src="img/photo.jpg">
