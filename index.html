@@ -131,7 +131,11 @@
       .setPin(".container-intro2")
       .addTo(controller);
 
-      new ScrollMagic.Scene({
+      
+        // define movement of panels
+      if($(window).width()>1024){
+
+        new ScrollMagic.Scene({
   									triggerElement: ".container-intro"
   								})
   								.setTween(
@@ -160,20 +164,49 @@
                               ) // trigger a TweenMax.to tween
                               // .addIndicators({name: "1 (duration: 0.5)"}) // add indicators (requires plugin)
                               .addTo(controller);
-        // define movement of panels
-      if($(window).width()>768){
         
         var wipeAnimation = new TimelineMax()
           .add([TweenMax.fromTo("section.panel.blue img#bg",    1, {scale:1, autoalpha:0.05}, {scale:1.05, ease: Linear.easeNone}),  // in from right      
-          TweenMax.fromTo("section.panel.blue img#light, section.panel.blue img#zelight", 1, {bottom: 0, autoalpha: 0.1}, {bottom:"50%", ease: Linear.easeNone}),
-          TweenMax.fromTo("#portfolio", 1, {y: "100%", autoalpha: 0.1}, {y: "50%", ease: Linear.easeNone}),
+          TweenMax.fromTo("section.panel.blue img#light, section.panel.blue img#zelight", 1, {bottom: 0, autoalpha: 0.1}, {bottom:"60%", ease: Linear.easeNone}),
+          TweenMax.fromTo("#portfolio", 1, {y: "100%", autoalpha: 0.1}, {y: "40%", ease: Linear.easeNone}),
           TweenMax.fromTo(".container-intro", 1, {x: "0%", autoalpha: 1}, {x: "200%", ease: Linear.easeNone}),
           TweenMax.fromTo(".container-intro-middle", 1, {x: "0%", autoalpha: 1}, {x: "100%", ease: Linear.easeNone}),
           TweenMax.fromTo(".container-intro2", 1, {scale:1, autoalpha: 0.005}, {scale: 0, ease: Linear.easeNone})])  // in from left
-          .fromTo("#skills",    3, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
+          .fromTo("#skills",    3, {x:  "200%"}, {x: "0%", ease: Linear.ease})  // in from right
           .fromTo("#contact", 1, {y: "100%"}, {y: "50%", ease: Linear.easeNone}); // in from top
+          console.log($(window).width());
       }
       else{
+        new ScrollMagic.Scene({
+  									triggerElement: ".container-intro"
+  								})
+  								.setTween(
+                    new TimelineMax()
+                    .fromTo(".container-intro", 1, {y: "-150vh", opacity: "0"}, {y: "-170vh", delay: 1, opacity: "1", ease: Linear.easeIn})
+                  ) // trigger a TweenMax.to tween
+  								// .addIndicators({name: "1 (duration: 0.5)"}) // add indicators (requires plugin)
+                  .addTo(controller);
+      
+      new ScrollMagic.Scene({
+  									triggerElement: ".container-intro-middle"
+  								})
+  								.setTween(
+                    new TimelineMax()
+                    .fromTo(".container-intro-middle", 1, {y: "-50vh", opacity: "0"}, {y: "-70vh", delay: 3, opacity: "1", ease: Linear.easeIn})
+                  ) // trigger a TweenMax.to tween
+  								// .addIndicators({name: "1 (duration: 0.5)"}) // add indicators (requires plugin)
+  								.addTo(controller);
+
+     new ScrollMagic.Scene({
+                                triggerElement: ".container-intro2"
+                              })
+                              .setTween(
+                                new TimelineMax()
+                                .fromTo(".container-intro2", 1, {y: "1000vh", opacity: "0"}, {y: "700vh", opacity: "0.5", delay: "4", ease: Linear.easeIn})
+                              ) // trigger a TweenMax.to tween
+                              // .addIndicators({name: "1 (duration: 0.5)"}) // add indicators (requires plugin)
+                              .addTo(controller);
+
         var wipeAnimation = new TimelineMax()
            .add([TweenMax.fromTo("section.panel.blue img#bg",    1, {scale:1, autoalpha:0.05}, {scale:1.5, ease: Linear.easeNone}),  // in from right      
            TweenMax.fromTo("section.panel.blue img#light, section.panel.blue img#zelight", 1, {bottom: 0, autoalpha: 0.1}, {bottom:"100%", ease: Linear.easeNone}),
@@ -191,7 +224,7 @@
   		new ScrollMagic.Scene({
   				triggerElement: ".container-fluid",
   				triggerHook: "onLeave",
-  				duration: "200%"
+  				duration: "3000"
   			})
   			.setPin(".container-fluid")
   			.setTween(wipeAnimation)
