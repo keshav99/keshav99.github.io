@@ -234,6 +234,8 @@ a .exp-box:hover{
   background: #725b5b;
   cursor: pointer;
   padding-left:20px;
+  text-decoration: none;
+
 }
 
 
