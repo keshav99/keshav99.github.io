@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/tiny.css">
     <title>Hey</title>
@@ -13,6 +14,7 @@
     <script src="js/TimelineLite.min.js"></script>
     <script src="js/TimelineMax.min.js"></script>
     <script src="js/jquery.gsap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script src="js/lib/iscroll-probe.js"></script>
     <script src="lib/scrollmagic/minified/ScrollMagic.min.js"></script>
     <script src="lib/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
@@ -26,7 +28,7 @@
   </head>
   <body>
       <div class="se-pre-con"></div>
-    <div class="container">
+    <div class="container-fluid">
       <div class="top-bar">
         <img src="img/photo.jpg">
         <ul>
@@ -37,19 +39,60 @@
         </ul>
       </div>
       <section class= "panel blue" id="about">
-        <img id="bg" src="img/hello.jpg">
+        <img id="bg" src="img/hello1.jpg">
         <img id="light" src="img/light.png">
         <img id="zelight" src="img/zelight.png">
         <div class="container-intro">Hi, I'm Keshav!</div>
         <div class="container-intro-middle">A software developer pursuing my 2nd year in Btech Computer Science(spec. in Information Security) at VIT University.  
           <br>
           <br>
-          <a href="https://github.com/keshav99" class=" github btn btn-5">Check Out My Github Handle</a> 
+          <a href="https://github.com/keshav99" class=" github btn btn-5">Github Handle  <img src="img/github-logo.png" alt=""></a> 
         </div>
         <div class="container-intro2">Scroll Down To Know Me</div>
       </section>
       <section class= "panel turquoise" id="portfolio">
-        <div class="cover"></div>
+        <div class="row">
+          <div class="col-lg-6 col-xs-12 portfool">
+            <h2>Experience</h2>
+            <img src="img/linkedin.png">
+
+            <div class="exp-box">
+              <h3>Core Committee Member</h3>
+              <h5>Technical</h5>
+              <h4>Computer Society Of India VIT Chapter</h4> 
+              <h6>Jan 2017 - Present</h6>
+              <img src="img/csi.png">
+
+            </div>
+            <div class="exp-box">
+                <h3>UX Developer</h3>
+                <h5>Internship</h5>
+                <h4>Vicara Tech</h4> 
+                <h6>June 2017 - Sept 2017</h6>
+                <img src="img/vicara.jpg">
+              </div>
+          </div>
+          <div class="col-lg-6 col-xs-12 portfool projects">
+            <h2>Projects</h2>
+            <br><br>
+            <div class="exp-box">
+              <h3>Kai Desktop App</h3>
+              <h5>Developed a desktop app for Kai, under Vicara, which is a wearable gesture based interaction device which tracks your hand movement and translates them into digital interactions intuitively.</h5>
+            </div>
+            <div class="exp-box">
+              <h3>Conference To-do list Manager</h3>
+              <h5>A C++ application to feed in everyday duties in business meeting
+                  . Add individual to-do items and set reminders for everyday for yourself
+                  . Add a conference, which is assigning duties among a group
+                  . Archive duties with a report summary to view them later
+                  . Sort them the way you want</h5>
+            </div>
+            <div class="exp-box">
+              <h3>Riddler 2016</h3>
+              <h5>Designed the UI for Riddler, which is a 3 day web game developed under Computer Society of India</h5>
+            </div>
+          </div>
+        </div>
       </section>
       <section id="skills"class= "panel green">
         <b>green</b>
@@ -117,23 +160,40 @@
                               ) // trigger a TweenMax.to tween
                               // .addIndicators({name: "1 (duration: 0.5)"}) // add indicators (requires plugin)
                               .addTo(controller);
-
         // define movement of panels
-      var wipeAnimation = new TimelineMax()
-        .add([TweenMax.fromTo("section.panel.blue img#bg",    1, {scale:1, autoalpha:0.05}, {scale:1.05, ease: Linear.easeNone}),  // in from right      
-        TweenMax.fromTo("section.panel.blue img#light, section.panel.blue img#zelight", 1, {bottom: 0, autoalpha: 0.1}, {bottom:"50%", ease: Linear.easeNone}),
-        TweenMax.fromTo("#portfolio", 1, {y: "100%", autoalpha: 0.1}, {y: "50%", ease: Linear.easeNone}),
-        TweenMax.fromTo(".container-intro2, .container-intro, .container-intro-middle", 1, {scale:1, autoalpha: 0.005}, {scale: 0, ease: Linear.easeNone})])  // in from left
-  			.fromTo("#skills",    1, {x:  "150%"}, {x: "0%", ease: Linear.easeNone})  // in from right
-  			.fromTo("#contact", 1, {y: "100%"}, {y: "50%", ease: Linear.easeNone}); // in from top
+      if($(window).width()>768){
+        
+        var wipeAnimation = new TimelineMax()
+          .add([TweenMax.fromTo("section.panel.blue img#bg",    1, {scale:1, autoalpha:0.05}, {scale:1.05, ease: Linear.easeNone}),  // in from right      
+          TweenMax.fromTo("section.panel.blue img#light, section.panel.blue img#zelight", 1, {bottom: 0, autoalpha: 0.1}, {bottom:"50%", ease: Linear.easeNone}),
+          TweenMax.fromTo("#portfolio", 1, {y: "100%", autoalpha: 0.1}, {y: "50%", ease: Linear.easeNone}),
+          TweenMax.fromTo(".container-intro", 1, {x: "0%", autoalpha: 1}, {x: "200%", ease: Linear.easeNone}),
+          TweenMax.fromTo(".container-intro-middle", 1, {x: "0%", autoalpha: 1}, {x: "100%", ease: Linear.easeNone}),
+          TweenMax.fromTo(".container-intro2", 1, {scale:1, autoalpha: 0.005}, {scale: 0, ease: Linear.easeNone})])  // in from left
+          .fromTo("#skills",    3, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
+          .fromTo("#contact", 1, {y: "100%"}, {y: "50%", ease: Linear.easeNone}); // in from top
+      }
+      else{
+        var wipeAnimation = new TimelineMax()
+           .add([TweenMax.fromTo("section.panel.blue img#bg",    1, {scale:1, autoalpha:0.05}, {scale:1.5, ease: Linear.easeNone}),  // in from right      
+           TweenMax.fromTo("section.panel.blue img#light, section.panel.blue img#zelight", 1, {bottom: 0, autoalpha: 0.1}, {bottom:"100%", ease: Linear.easeNone}),
+          TweenMax.fromTo("#portfolio", 1, {y: "100%", autoalpha: 0.1}, {y: "0%", ease: Linear.easeNone}),
+          TweenMax.fromTo(".container-intro", 1, {x: "0%", autoalpha: 1}, {x: "200%", ease: Linear.easeNone}),
+          TweenMax.fromTo(".container-intro-middle", 1, {x: "0%", autoalpha: 1}, {x: "100%", ease: Linear.easeNone}),
+          TweenMax.fromTo(".container-intro2", 1, {scale:1, autoalpha: 0.005}, {scale: 0, ease: Linear.easeNone})])  // in from left
+          .fromTo("#skills",    3, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
+          .fromTo("#contact", 1, {y: "100%"}, {y: "50%", ease: Linear.easeNone}); // in from top
+          console.log($(window).width());
+        console.log("doesnt");
+      }
 
   		// create scene to pin and link animation
   		new ScrollMagic.Scene({
-  				triggerElement: ".container",
+  				triggerElement: ".container-fluid",
   				triggerHook: "onLeave",
   				duration: "200%"
   			})
-  			.setPin(".container")
+  			.setPin(".container-fluid")
   			.setTween(wipeAnimation)
   			// .addIndicators() // add indicators (requires plugin)
         .addTo(controller);

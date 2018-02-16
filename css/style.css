@@ -2,7 +2,7 @@ body{
   transition: all 1s ease;
   margin: 0;
   padding: 0;
-  font-family: 'Big John';
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.25em;
   color: #fff;
   /* overflow: hidden; */
@@ -16,6 +16,7 @@ body{
   width: 100%;
   margin: 40px;
   display: inline-block;
+  font-family: 'Big John';
 }
 
 
@@ -27,9 +28,11 @@ body{
   display: none; 
 }
 
-.container{
-  width: 100vw;
-	height: 100vh;
+.container-fluid{
+  width: 100% !important;
+  height: 100vh;
+  padding-right: 0 !important;
+  margin-right: 0 !important;
 }
 
 ::-webkit-scrollbar {
@@ -77,7 +80,7 @@ body{
 }
 
 .panel.turquoise{
-  background: rgba(167, 133, 133, 0.6);
+  background: rgba(80, 64, 64, 0.6);
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -146,4 +149,101 @@ body{
 .top-bar ul li a:hover{
   transform: translateZ(-15px);
   color:rgba(200,200,200,1);
+}
+
+.portfool{
+  padding: 2.5vh 0 0 5vh;
+}
+
+.portfool h2{
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 900;
+  color: rgb(255, 155, 155);
+  display: inline;
+}
+
+.portfool img{
+  float: right;
+  width: 40px;
+  margin: 0 10px 0 0;
+  transition: all 1s ease;
+}
+
+.portfool img:hover{
+  filter: grayscale();
+  cursor: pointer;
+  transform: rotateZ(360deg);
+}
+
+.exp-box h3{
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.exp-box h4{
+  font-size: 0.8em;
+}
+.exp-box h5{
+  font-size: 0.7em;
+}
+
+.exp-box h6{
+  font-size: 0.6em;
+}
+
+.exp-box{
+  padding: 5vh 10px 2.5vh 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.exp-box img{
+  width: 75px;
+  float: right;
+  margin-top: -100px;
+  margin-right: 2.5vh;
+  border-radius: 200px;
+}
+
+.projects .exp-box h3{
+  font-size: 1em;
+}
+
+.projects .exp-box h5{
+  font-size: 0.6em;
+}
+
+.projects{
+  margin-top:20px;
+  padding: 0 0 0 5vh;
+}
+
+.projects .exp-box {
+  padding-top: 10px;
+}
+
+
+@media (max-width: 768px){
+  .panel.turquoise{
+    background: rgba(80, 64, 64, 1);
+  }
+  .top-bar ul li, .top-bar ul li a{
+    font-size: 0.8em;
+    margin-right: 10%;
+    margin-top: -20px;
+  }
+  .top-bar img{
+    margin-left: -25px; 
+  }
+
+  .container-intro, .container-intro-middle{
+    left:0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .container-intro2{
+    font-size: 0.6em;
+    margin-top: 200px;
+  }
 }
