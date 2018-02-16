@@ -23,6 +23,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+    <script src="https://use.fontawesome.com/8416ea41ee.js"></script>
     
 
   </head>
@@ -165,7 +166,15 @@
                     </div>        
       </section>
       <section class= "panel bordeaux" id="contact">
-        <b>bored</b>
+          <ul>
+              <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+              <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+              <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+              <li><i class="fa fa-tumblr" aria-hidden="true"></i></li>
+              <li><i class="fa fa-google-plus" aria-hidden="true"></i></li>
+              <li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
+          </ul>
+          <h1 class='elegantshadow'>Thanks for visiting!</h1>
       </section>
 
     </div>
@@ -240,8 +249,8 @@
           TweenMax.fromTo(".container-intro", 1, {x: "0%", autoalpha: 1}, {x: "200%", ease: Linear.easeNone}),
           TweenMax.fromTo(".container-intro-middle", 1, {x: "0%", autoalpha: 1}, {x: "100%", ease: Linear.easeNone}),
           TweenMax.fromTo(".container-intro2", 1, {scale:1, autoalpha: 0.005}, {scale: 0, ease: Linear.easeNone})])  // in from left
-          .fromTo("#skills",    2, {x:  "150%"}, {x: "0%", ease: Linear.ease})  // in from right
-          .fromTo("#contact", 1, {y: "150%"}, {y: "50%", ease: Linear.easeNone}); // in from top
+          .fromTo("#skills",    2, {x:  "150%"}, {x: "0%", ease: Linear.easeNone})  // in from right
+          .fromTo("#contact", 1, {y: "250%"}, {y: "150%", ease: Linear.easeNone}); // in from top
           new ScrollMagic.Scene({
   				triggerElement: ".container-fluid",
   				triggerHook: "onLeave",
