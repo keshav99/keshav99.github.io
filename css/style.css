@@ -150,8 +150,7 @@ body{
   background: rgba(255, 255, 255, 1);
   z-index: 3;
   overflow: hidden;
-  height: 50vh;
-  
+  height: 30vh;
 }
 
 
@@ -295,20 +294,20 @@ body{
   padding: 0;
   position: absolute;
   top: 25%;
-  left: 50%;
+  left: 50% !important;
   transform: translate(-50%, -50%);
 }
 .bordeaux ul li {
   list-style: none;
   float:left;
   margin: 10px;
-  width: 100px;
-  height:100px;
-  line-height: 100px;
+  width: 70px;
+  height:70px;
+  line-height: 70px;
   text-align:center;
   background:rgb(129, 112, 112);
   border-radius: 50%;
-  font-size: 50px;
+  font-size: 30px;
   position: relative;
   transition: .5s ease-in-out;
   color: #262626;
@@ -344,6 +343,16 @@ body{
 @media (max-width: 1024px){
   .panel.turquoise{
     background: rgba(80, 64, 64, 1);
+    top:100%;
+    height: auto;
+  }
+
+  .panel.green{
+    top:200%;
+    height: auto;
+  }
+  .panel.bordeaux{
+    top:335%;
   }
   .top-bar ul li, .top-bar ul li a{
     font-size: 1.1em;
@@ -360,6 +369,11 @@ body{
     width: 100%;
     font-size: 2.2em;
   }
+  
+  .container-intro-middle{
+    margin-top:50px;
+  }
+
   .container-intro2{
     font-size: 1.5em;
   }
@@ -438,4 +452,6 @@ body{
       height:200px;
       margin-bottom: 40px;
     }
+
+    
 }

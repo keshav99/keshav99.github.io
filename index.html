@@ -294,7 +294,7 @@
           TweenMax.fromTo(".container-intro-middle", 1, {x: "0%", autoalpha: 1}, {x: "100%", ease: Linear.easeNone}),
           TweenMax.fromTo(".container-intro2", 1, {scale:1, autoalpha: 0.005}, {scale: 0, ease: Linear.easeNone})])  // in from left
           .fromTo("#skills",    2, {x:  "150%"}, {x: "0%", ease: Linear.easeNone})  // in from right
-          .fromTo("#contact", 1, {y: "250%"}, {y: "150%", ease: Linear.easeNone}); // in from top
+          .fromTo("#contact", 1, {y: "500%"}, {y: "250%", ease: Linear.easeNone}); // in from top
           new ScrollMagic.Scene({
   				triggerElement: ".container-fluid",
   				triggerHook: "onLeave",
@@ -336,27 +336,27 @@
                               ) // trigger a TweenMax.to tween
                               // .addIndicators({name: "1 (duration: 0.5)"}) // add indicators (requires plugin)
                               .addTo(controller);
-
-        var wipeAnimation = new TimelineMax()
-           .add([
-          //    TweenMax.fromTo("section.panel.blue img#bg",    3, {scale:1, autoalpha:0.05}, {scale:1.5, ease: Linear.easeNone}),  // in from right      
-          //  TweenMax.fromTo("section.panel.blue img#light, section.panel.blue img#zelight", 3, {bottom: 0, autoalpha: 0.1}, {bottom:"100%", ease: Linear.easeNone}),
-          //  TweenMax.fromTo("section.panel.blue img#zelight", 2, {opacity: 0.5, autoalpha: 0.1}, {opacity:0, ease: Linear.easeNone}),
-          TweenMax.fromTo("#portfolio", 3, {y: "100%", autoalpha: 1}, {y: "0%", ease: Linear.easeNone}),
-          TweenMax.fromTo(".container-intro", 1, { autoalpha: 1}, {y: "-300%", ease: Linear.easeNone}),
-          TweenMax.fromTo(".container-intro-middle", 1, {autoalpha: 1}, {y: "-300%", ease: Linear.easeNone}),
-          TweenMax.fromTo(".container-intro2", 1, {scale:1, autoalpha: 0.005}, {scale: 0, ease: Linear.easeNone})])  // in from left
-          .fromTo("#skills",    3, {x:  "150%"}, {x: "0%", ease: Linear.easeNone})  // in from right
-          .fromTo("#contact", 1, {y: "250%"}, {y: "150%", ease: Linear.easeNone}); // in from top
-          new ScrollMagic.Scene({
-  				triggerElement: ".container-fluid",
-  				triggerHook: "onLeave",
-  				duration: "3000"
-  			})
-  			.setPin(".container-fluid")
-  			.setTween(wipeAnimation)
-  			// .addIndicators() // add indicators (requires plugin)
-        .addTo(controller);
+// <!-- 
+//         var wipeAnimation = new TimelineMax()
+//            .add([
+//           //    TweenMax.fromTo("section.panel.blue img#bg",    3, {scale:1, autoalpha:0.05}, {scale:1.5, ease: Linear.easeNone}),  // in from right      
+//           //  TweenMax.fromTo("section.panel.blue img#light, section.panel.blue img#zelight", 3, {bottom: 0, autoalpha: 0.1}, {bottom:"100%", ease: Linear.easeNone}),
+//           //  TweenMax.fromTo("section.panel.blue img#zelight", 2, {opacity: 0.5, autoalpha: 0.1}, {opacity:0, ease: Linear.easeNone}),
+//           TweenMax.fromTo("#portfolio", 3, {y: "100%", autoalpha: 1}, {y: "0%", ease: Linear.easeNone}),
+//           TweenMax.fromTo(".container-intro", 1, { autoalpha: 1}, {y: "-300%", ease: Linear.easeNone}),
+//           TweenMax.fromTo(".container-intro-middle", 1, {autoalpha: 1}, {y: "-300%", ease: Linear.easeNone}),
+//           TweenMax.fromTo(".container-intro2", 1, {scale:1, autoalpha: 0.005}, {scale: 0, ease: Linear.easeNone})])  // in from left
+//           .fromTo("#skills",    3, {x:  "150%"}, {x: "0%", ease: Linear.easeNone})  // in from right
+//           .fromTo("#contact", 1, {y: "250%"}, {y: "150%", ease: Linear.easeNone}); // in from top
+//           new ScrollMagic.Scene({
+//   				triggerElement: ".container-fluid",
+//   				triggerHook: "onLeave",
+//   				duration: "3000"
+//   			})
+//   			.setPin(".container-fluid")
+//   			.setTween(wipeAnimation)
+//   			// .addIndicators() // add indicators (requires plugin)
+//         .addTo(controller); -->
           console.log($(window).width());
         console.log("doesnt");
         
