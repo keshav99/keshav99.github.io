@@ -68,7 +68,7 @@ $(window).load(function() {
         TweenMax.fromTo(".container-intro", 1, {x: "0%", autoalpha: 1}, {x: "200%", ease: Linear.easeNone}),
         TweenMax.fromTo(".container-intro-middle", 1, {x: "0%", autoalpha: 1}, {x: "100%", ease: Linear.easeNone}),
         TweenMax.fromTo(".container-intro2", 1, {scale:1, autoalpha: 0.005}, {scale: 0, ease: Linear.easeNone})])  // in from left
-        .fromTo("#skills",    3, {y:  "-150%"}, {y: "0%", ease: Linear.easeNone})  // in from right
+        .fromTo("#skills",    4, {y:  "150%"}, {y: "0%", ease: Linear.easeNone})  // in from right
         .fromTo("#contact", 1, {y: "500%"}, {y: "250%", ease: Linear.easeNone}); // in from top
         new ScrollMagic.Scene({
         triggerElement: ".container-fluid",
