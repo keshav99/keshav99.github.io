@@ -45,7 +45,7 @@
           <br>
           <br>
           <a href="https://github.com/keshav99" class=" github btn btn-5">Github Handle  <img src="img/github-logo.png" alt=""></a> 
-          <a href="https://github.com/keshav99" class=" github btn btn-5">Download Resume  <img src="img/download.png" alt=""></a> 
+          <a href="docs/Keshav Moorthy.pdf" download class=" github btn btn-5">Download Resume  <img src="img/download.png" alt=""></a> 
         </div>
         <div class="container-intro2">Scroll Down To Know Me</div>
       </section>
@@ -53,7 +53,7 @@
         <div class="row">
           <div class="col-lg-6 col-xs-12 portfool">
             <h2>Experience</h2>
-            <a href="https://www.linkedin.com/in/keshav-moorthy-66ba12137/"><img src="img/linkedin.png"></a>
+            <a href="https://www.linkedin.com/in/keshav-moorthy-66ba12137/" class="linkedin">Link to LinkedIn<img src="img/linkedin.png"></a>
 
            <a href="https://csivit.com"> <div class="exp-box">
               <h3>Core Committee Member</h3>
@@ -182,7 +182,7 @@
 		$(".se-pre-con").fadeOut("slow");;
 	});
         $("#nav-container").hover(function() {
-            // console.log('umm');
+             console.log('umm');
           $('#nav-container').toggleClass("pushed");
         });
       var controller = new ScrollMagic.Controller();
@@ -247,7 +247,7 @@
           TweenMax.fromTo(".container-intro", 1, {x: "0%", autoalpha: 1}, {x: "200%", ease: Linear.easeNone}),
           TweenMax.fromTo(".container-intro-middle", 1, {x: "0%", autoalpha: 1}, {x: "100%", ease: Linear.easeNone}),
           TweenMax.fromTo(".container-intro2", 1, {scale:1, autoalpha: 0.005}, {scale: 0, ease: Linear.easeNone})])  // in from left
-          .fromTo("#skills",    2, {x:  "150%"}, {x: "0%", ease: Linear.easeNone})  // in from right
+          .fromTo("#skills",    3, {y:  "-150%"}, {y: "0%", ease: Linear.easeNone})  // in from right
           .fromTo("#contact", 1, {y: "500%"}, {y: "250%", ease: Linear.easeNone}); // in from top
           new ScrollMagic.Scene({
   				triggerElement: ".container-fluid",

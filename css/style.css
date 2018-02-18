@@ -191,18 +191,8 @@ body{
   font-family: 'Lato';
 }
 
-.portfool img{
-  float: right;
-  width: 40px;
-  margin: 0 10px 0 0;
-  transition: all 1s ease;
-}
 
-.portfool img:hover{
-  filter: grayscale();
-  cursor: pointer;
-  transform: rotateZ(360deg);
-}
+
 
 a .exp-box{
   color: #fff;
@@ -233,11 +223,63 @@ a .exp-box{
 a .exp-box:hover{
   background: #725b5b;
   cursor: pointer;
+  font-weight: bold;
   padding-left:20px;
+  filter: grayscale();
   text-decoration: none;
 
 }
 
+a:link    {
+  /* Applies to all unvisited links */
+  text-decoration:  none;
+  font-weight:      bold;
+  } 
+a:visited {
+  /* Applies to all visited links */
+  text-decoration:  none;
+  font-weight:      bold;
+  } 
+a:hover   {
+  /* Applies to links under the pointer */
+  text-decoration:  none;
+  font-weight:      bold;
+  } 
+a:active  {
+  /* Applies to activated links */
+  text-decoration:  none;
+  font-weight:      bold;
+  color: #e5e5e5;
+  } 
+
+  .linkedin{
+    display: inline;
+    margin-top: 10px;
+    font-size: 0.8em;
+    float: right;
+    padding: 20px 5px 5px 20px;
+    margin-top: -10px;
+    color: rgb(253, 191, 191);
+    transition: all 0.5s ease;
+  }
+
+  .linkedin:hover{
+    color: #e5e5e5;
+  }
+
+  .portfool img{
+    float: right;
+    width: 40px;
+    margin: -10px 10px 0 10px;
+    transition: all 1s ease;
+  }
+  
+  .linkedin:hover{
+    background: rgba(0,0,0,0.1);
+    filter: grayscale();
+    cursor: pointer;
+    transform: translateX(5px);
+  }
 
 
 a .exp-box img{
