@@ -321,8 +321,8 @@ a .exp-box img{
 }
 
 .col img{
-  height: 80px;
-  width: 80px;
+  height: 5vw;
+  width: 5vw;
   float: left;
   border-radius: 20px;
   display: block ;/*for the img inside your div */  
@@ -391,16 +391,22 @@ a .exp-box img{
 @media (max-width: 1024px){
   .panel.turquoise{
     background: rgba(80, 64, 64, 1);
-    top:100%;
-    height: auto;
+    top:100vh;
+    min-height: 100%;
+  }
+
+
+  .linkedin{
+    font-size: 1.6em;
   }
 
   .panel.green{
     top:200%;
-    height: auto;
+    min-height: 135%;
   }
   .panel.bordeaux{
     top:335%;
+    height: 250px;
   }
 
   .bordeaux ul{
@@ -422,7 +428,7 @@ a .exp-box img{
     left:0;
     text-align: center;
     width: 100%;
-    font-size: 2.2em;
+    font-size: 1.8em;
   }
   
   .container-intro-middle{
@@ -433,27 +439,32 @@ a .exp-box img{
     font-size: 1.5em;
   }
 
+  a .exp-box{
+    margin-left: -40px;
+  }
+
     a .exp-box h3{
-      font-size: 2em;
+      font-size: 1.8em;
       margin-top: -30px;
     }
     a .exp-box h4{
-      font-size: 1.6em;
+      font-size: 1.4em;
       margin-top:10px;
     }
     a .exp-box h5{
-      font-size: 1.4em;
+      font-size: 1.2em;
       margin-top:30px;
     }
     
     a .exp-box h6{
-      font-size: 1.2em;
+      font-size: 1em;
       margin-top:10px;
 
     }
     a .exp-box img{
       width: 150px;
       margin-top: -150px;
+      margin-right: -1px;
     }
 
     .portfool h2{
@@ -470,12 +481,12 @@ a .exp-box img{
     }
 
     .projects a .exp-box h3{
-      font-size: 2em;
+      font-size: 1.8em;
       margin-top: 30px;
     }
     
     .projects a .exp-box h5{
-      font-size: 1.2em;
+      font-size: 1.4em;
       margin-top:30px;
 
     }
@@ -521,4 +532,10 @@ a .exp-box img{
 
 
     
+}
+
+@media (min-width: 1000px){
+  col h4{
+    opacity: 0;
+  }
 }
