@@ -65,9 +65,9 @@ $(window).load(function() {
         TweenMax.fromTo("section.panel.blue img#light, section.panel.blue img#zelight", 1, {bottom: 0, autoalpha: 0.1}, {bottom:"60%", ease: Linear.easeNone}),
         TweenMax.fromTo("section.panel.blue img#zelight", 2, {opacity: 0.5, autoalpha: 0.1}, {opacity:0, ease: Linear.easeNone}),
         TweenMax.fromTo("#portfolio", 1, {y: "100%",  autoalpha: 0.1}, {y: "40%", ease: Linear.easeNone}),
-        TweenMax.fromTo(".container-intro", 1, {x: "0%", autoalpha: 1}, {x: "200%", ease: Linear.easeNone}),
-        TweenMax.fromTo(".container-intro-middle", 1, {x: "0%", autoalpha: 1}, {x: "100%", ease: Linear.easeNone}),
-        TweenMax.fromTo(".container-intro2", 1, {scale:1, autoalpha: 0.005}, {scale: 0, ease: Linear.easeNone})])  // in from left
+        TweenMax.fromTo(".container-intro", 1, { autoalpha: 1}, {y: "-200%", ease: Linear.easeNone}),
+        TweenMax.fromTo(".container-intro-middle", 1, { autoalpha: 1}, {y: "-200%", ease: Linear.easeNone}),
+        TweenMax.fromTo(".container-intro2", 1, {opacity:1, autoalpha: 0.005}, {opacity: 0, ease: Linear.easeNone})])  // in from left
         .fromTo("#skills",    4, {y:  "150%"}, {y: "0%", ease: Linear.easeNone})  // in from right
         .fromTo("#contact", 1, {y: "500%"}, {y: "250%", ease: Linear.easeNone}); // in from top
         new ScrollMagic.Scene({
