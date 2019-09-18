@@ -80,7 +80,6 @@ body{
   top: 0;
   left: 0;
   position: absolute;
-  overflow-y: hidden;
   padding-right: 17px; 
 }
 
@@ -107,8 +106,9 @@ body{
 .panel.turquoise{
   background: rgba(80, 64, 64, 0.6);
   width: 100vw;
-  height: 100vh;
-  position: absolute;
+  min-height: 50vh;
+  position: relative;
+  overflow-y: scroll;
   top: 0;
   left: 0;
   color: #fff;
@@ -158,8 +158,8 @@ body{
 
 
 .top-bar img{
-  width: 60px;
-  border-radius: 30px; 
+  width: 90px;
+  border-radius: 45px; 
   display: inline-block;
 }
 
@@ -218,7 +218,7 @@ a .exp-box h6{
 }
 
 a .exp-box{
-  padding: 5vh 10px 2.5vh 10px;
+  padding: 3vh 10px 1.5vh 10px;
   border-bottom: 1px solid #e5e5e5;
   transition: all 1s ease;
 }
@@ -286,9 +286,9 @@ a:active  {
 
 
 a .exp-box img{
-  width: 75px;
+  width: 50px;
   float: right;
-  margin-top: -100px;
+  margin-top: -75px;
   margin-right: 2.5vh;
   border-radius: 200px;
 }

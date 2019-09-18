@@ -1,0 +1,791 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200&display=swap');
+body{
+  transition: all 1s ease;
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 100;
+  font-size: 1.25em;
+  color: #fff;
+  overflow-x: none !important;
+  /* overflow: hidden; */
+  /*This would hide the scroll bar of the bottom if there is one*/
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: "Big";
+  src: url("fonts/BIG JOHN.otf");
+}
+
+.top-bar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  margin: 40px;
+  display: inline-block;
+  font-family: 'Big';
+}
+
+
+
+
+
+
+
+.container-fluid{
+  width: 100% !important;
+  height: 100vh;
+  padding-right: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+.container-intro, .container-intro-middle{
+  position: absolute;
+  width: 48%;
+  z-index: 5;
+  /* border: 3px solid #fff;
+  border-radius: 20px; */
+  padding: 50px;
+  left: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.container-intro2{
+  position: absolute;
+  top:100px;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  font-weight: lighter;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  z-index: 5;
+}
+
+.panel{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  padding-right: 17px; 
+}
+
+.panel.green{
+  background: linear-gradient(rgba(180, 114, 114,0.98), #693e3e);
+  z-index: 3;
+  width: 50vw;
+  left:50vw;
+  overflow: none;
+}
+
+.green h2{
+  text-align: center;
+  padding: 20px;
+  font-weight: bolder;
+}
+
+.green h3{
+  padding: 20px;
+  color: #fff;
+  margin-right:50%;
+  font-weight: 400;
+  font-size: 1.2em;
+}
+
+.panel.turquoise{
+  background: rgba(80, 64, 64, 0.6);
+  width: 50vw;
+  min-height: 50vh;
+  top: 0;
+  left: 50vw;
+  color: #fff;
+  z-index: 2;
+  font-family: 'Montserrat', sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+
+
+.panel.blue img#bg{
+  width:100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  z-index: -100;
+  left:0;
+}
+
+
+
+
+
+.panel.blue{
+}
+
+.panel.bordeaux{
+  background: rgba(255, 255, 255, 1);
+  z-index: 3;
+  overflow: hidden;
+  height: 30vh;
+}
+
+
+.top-bar img{
+  width: 90px;
+  border-radius: 45px; 
+  display: inline-block;
+}
+
+.top-bar ul li{
+  display: inline-block;
+  float: right;
+  margin-right: 100px;
+  z-index: 99 !important;
+}
+
+.top-bar ul li a{
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.top-bar ul li a:hover{
+  transform: translateZ(-15px);
+  color:rgba(200,200,200,1);
+}
+
+.portfool{
+  padding: 2.5vh 0 0 5vh;
+}
+
+.portfool h2{
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 900;
+  color: rgb(255, 155, 155);
+  display: inline;
+  font-family: 'Lato';
+}
+
+
+
+
+a .exp-box{
+  color: #fff;
+}
+
+a .exp-box h3{
+  font-size: 1em;
+  font-weight: 600;
+}
+
+a .exp-box h4{
+  font-size: 0.8em;
+}
+a .exp-box h5{
+  font-size: 0.7em;
+}
+
+a .exp-box h6{
+  font-size: 0.6em;
+}
+
+a .exp-box{
+  padding: 3vh 10px 1.5vh 10px;
+  border-bottom: 1px solid #e5e5e5;
+  transition: all 1s ease;
+}
+
+a .exp-box:hover{
+  background: #725b5b;
+  cursor: pointer;
+  font-weight: bold;
+  padding-left:20px;
+  filter: grayscale();
+  text-decoration: none;
+  
+}
+
+a:link    {
+  /* Applies to all unvisited links */
+  text-decoration:  none;
+  font-weight:      bold;
+} 
+a:visited {
+  /* Applies to all visited links */
+  text-decoration:  none;
+  font-weight:      bold;
+} 
+a:hover   {
+  /* Applies to links under the pointer */
+  text-decoration:  none;
+  font-weight:      bold;
+} 
+a:active  {
+  /* Applies to activated links */
+  text-decoration:  none;
+  font-weight:      bold;
+  color: #e5e5e5;
+} 
+
+.linkedin{
+  display: inline;
+  margin-top: 10px;
+  font-size: 0.8em;
+  float: right;
+  padding: 20px 5px 5px 20px;
+  margin-top: -10px;
+  color: rgb(253, 191, 191);
+  transition: all 0.5s ease;
+}
+
+.linkedin:hover{
+  color: #e5e5e5;
+}
+
+.portfool img{
+  float: right;
+  width: 40px;
+  margin: -10px 10px 0 10px;
+  transition: all 1s ease;
+}
+
+.linkedin:hover{
+  background: rgba(0,0,0,0.1);
+  filter: grayscale();
+  cursor: pointer;
+  transform: translateX(5px);
+}
+
+
+a .exp-box img{
+  width: 50px;
+  float: right;
+  margin-top: -75px;
+  margin-right: 2.5vh;
+  border-radius: 200px;
+}
+
+.projects a .exp-box h3{
+  font-size: 1em;
+}
+
+.projects a .exp-box h5{
+  font-size: 0.6em;
+}
+
+.projects{
+  margin-top:20px;
+  padding: 0 0 0 5vh;
+}
+
+.projects a .exp-box {
+  padding-top: 10px;
+}
+
+.holder{
+  width: 30%;
+}
+
+
+
+
+.col{
+  min-width: 150px;
+  margin-left: 5%;
+  font-family: 'Lato';
+}
+
+.col img{
+  height: 5vw;
+  width: 5vw;
+  float: left;
+  border-radius: 20px;
+  display: block ;/*for the img inside your div */  
+  margin-left: auto ;
+  margin-right: auto ;
+}
+
+.col h4{
+  text-align: left;
+  font-size: 0.9em;
+  margin-right: 20px;
+  margin-top: 100px;
+}
+
+.bordeaux ul{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 25%;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+}
+.bordeaux ul li {
+  list-style: none;
+  float:left;
+  margin: 10px;
+  width: 70px;
+  height:70px;
+  line-height: 70px;
+  text-align:center;
+  background:rgb(129, 112, 112);
+  border-radius: 50%;
+  font-size: 30px;
+  position: relative;
+  transition: .5s ease-in-out;
+  color: #262626;
+  z-index: 1;
+}
+.bordeaux .ul li:hover {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: none;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: .5s ease-in-out;
+  z-index: -1;
+}
+.bordeaux ul li:hover:before {
+  
+  transform: scale(.9);
+  
+}
+.bordeaux ul li:hover{
+  cursor: pointer;
+  color: rgb(136, 103, 133);
+  background: none;
+  border: 3px solid rgb(131, 113, 113);
+  border-radius: 50%;
+  
+}
+
+.bigblocks{
+  position: relative;
+  width:98vw;
+  /* background: rgba(255, 255, 0, 0.24); */
+  top:100vh;
+  border-top: 6px solid #262626;
+  z-index: 6;
+  padding:0;
+  margin: 0;
+  /* padding: 10vh; */
+}
+
+
+.blocks{
+  width: 50vw;
+  /* background: rgb(0, 125, 228); */
+  background: rgba(0, 77, 139, 0.85);
+  margin: 0;
+  margin-left:48vw;
+  padding: 40px;
+  text-align: justify;
+}
+
+.blocks.two{
+  /* background: rgba(212, 0, 99, 0.75); */
+  
+  background: rgba(185, 1, 87, 0.85);
+  
+}
+
+.blocks.three{
+  /* background: rgba(175, 175, 175, 0.85); */
+  
+  background: rgba(0, 145, 102, 0.85);
+  margin-right: auto;
+  text-align: center;
+  padding-bottom: 100px; 
+}
+
+.blocks.three img{
+  width: 33%;
+  /* margin: 20px auto; */
+  vertical-align: middle;
+  margin: 20px;
+}
+
+.blocks.three .ttt{
+  text-align: justify;
+}
+
+.blocks.three a{
+  color:#ffcaca;
+  /* box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.25); */
+  border-bottom: 1px solid #ffcaca;
+  
+}
+
+.blocks.four{
+  background: rgba(96, 0, 160, 0.85);
+  
+}
+
+.blocks.four h2{
+  font-weight: 100;
+}
+
+.blocks .five{
+  background: rgba(0, 178, 190, 0.85);
+}
+
+.blocks.six{
+  background: rgba(66, 165, 0,0.85);
+}
+
+
+.logo{
+  width: 30px !important;
+  margin: 10px;
+  
+}
+
+.title{
+  position: absolute;
+  display: block;
+  padding: 40px;
+  text-align: center;
+  margin-left: 100px;
+  font-family: "Big";
+  font-size:1.5em;
+  background: #262626dc;
+}
+
+#me2{
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.dock{
+  width: 500px;
+  display: block;
+  margin: 15% auto;
+  transition: all 1s ease;
+}
+
+.dock img{
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  margin-right: 27px;
+  margin-top: 27px; 
+  float: center;
+  border-radius: 20px;
+  padding: 10px;
+  background: rgba(172, 132, 248, 0.8); 
+  z-index: 6;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.55);
+}
+
+.dock img:hover{
+  cursor: pointer;
+  border: 2px solid #693e3e;
+  box-shadow: none;
+}
+
+.panel.blue img#light{
+  width: 100%;
+  position: fixed;
+  bottom:0;
+  left:0;
+  z-index: 5;
+}
+
+.panel.blue img#zelight{
+  width: 100%;
+  opacity: 0;
+  position: fixed;
+  bottom:0;
+  left:0;
+  transition: all 2s ease;
+}
+
+.panel.blue img#zelight.bg1{
+  content:url("../img/zelight.png");
+}
+
+.panel.blue img#zelight.bg2{
+  content:url("../img/zelight.png");
+}
+
+
+figure {
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+  height: 250px;
+  width: 13vw;
+  padding: 20px 20px;
+  margin-bottom: 80px;
+  background-repeat: repeat;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+  cursor: pointer;
+}
+figure:before, figure:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+figure:before {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 0;
+}
+figure:after {
+  content: '';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+}
+figure:hover {
+  background-size: 175%;
+  content: '';
+}
+figure:hover:after {
+  content: 'Click for project report';
+  background-color: rgba(132, 15, 241, 0.95);
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+figure:hover .date {
+  bottom: -59px;
+}
+figure:hover span{
+  top:-59px;
+}
+figure .date {
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+figure .date span {
+  color: white;
+  line-height: 1;
+}
+
+figure .date span:last-child {
+  font-size: 14px;
+  font-weight: 400;
+}
+figcaption {
+  color: white;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 1;
+}
+figcaption h4 {
+  margin: 0 0 5px;
+  font-size: 1em;
+  text-align: left;
+  line-height: 1.35;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+figcaption p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.cert{
+  width:90% !important;
+  height:auto !important;
+  margin-top:20px;
+  margin-bottom:10px;
+}
+
+.cert:hover:after{
+  content: 'Go to certificate';
+  background-color: rgba(1, 124, 133, 0.95);
+}
+
+
+@media (max-width: 1024px){
+  .panel.turquoise{
+    background: rgba(80, 64, 64, 1);
+    top:100vh;
+    min-height: 100%;
+  }
+  
+  
+  .linkedin{
+    font-size: 1.6em;
+  }
+  
+  .panel.green{
+    top:200%;
+    min-height: 135%;
+  }
+  .panel.bordeaux{
+    top:335%;
+    height: 250px;
+  }
+  
+  .bordeaux ul{
+    width: 100%;
+    
+    
+  }
+  
+  .top-bar ul li, .top-bar ul li a{
+    font-size: 1.1em;
+    margin-right: 10%;
+    margin-top: -20px;
+  }
+  .top-bar img{
+    margin-left: -25px; 
+  }
+  
+  .container-intro, .container-intro-middle{
+    position: absolute;
+    left:0;
+    text-align: center;
+    width: 100%;
+    font-size: 1.8em;
+  }
+  
+  .container-intro-middle{
+    margin-top:50px;
+  }
+  
+  .container-intro2{
+    font-size: 1.5em;
+  }
+  
+  a .exp-box{
+    margin-left: -40px;
+  }
+  
+  a .exp-box h3{
+    font-size: 1.8em;
+    margin-top: -30px;
+  }
+  a .exp-box h4{
+    font-size: 1.4em;
+    margin-top:10px;
+  }
+  a .exp-box h5{
+    font-size: 1.2em;
+    margin-top:30px;
+  }
+  
+  a .exp-box h6{
+    font-size: 1em;
+    margin-top:10px;
+    
+  }
+  a .exp-box img{
+    width: 150px;
+    margin-top: -150px;
+    margin-right: -1px;
+  }
+  
+  .portfool h2{
+    font-size: 2em;
+  }
+  
+  .portfool img{
+    width: 80px;
+    margin-right: 80px;
+  }
+  
+  .col-xs-12{
+    margin-bottom: 100px;
+  }
+  
+  .projects a .exp-box h3{
+    font-size: 1.8em;
+    margin-top: 30px;
+  }
+  
+  .projects a .exp-box h5{
+    font-size: 1.4em;
+    margin-top:30px;
+    
+  }
+  
+  .green h2{
+    font-size: 3em;
+  }
+  
+  h3 b{
+    font-size: 1.6em;
+  }
+  
+  .col h4{
+    font-size: 1.6em;
+    margin-left:15px;
+  }
+  
+  .col{
+    margin: 50px;
+  }
+  
+  .col img{
+    width: 200px;
+    height:200px;
+    margin-bottom: 40px;
+  }
+  
+  
+  .bordeaux ul{
+    left:-20%;
+    transform: translateX(50%, 50%);
+    margin: 0;
+    width: 80vw;
+  }
+  
+  .bordeaux ul li {
+    width: 10vw;
+    height:10vw;
+    line-height: 10vw;
+    font-size: 50px;
+    
+  }
+  
+  
+  
+}
+
+@media (min-width: 1000px){
+  col h4{
+    opacity: 0;
+  }
+}
