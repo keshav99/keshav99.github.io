@@ -1,0 +1,57 @@
+body{
+    font-family: 'Segoe UI Light';
+    font-size: 1.25em;
+    padding-top:10%;
+    text-align: justify;
+    word-spacing: 0.2cm;
+    line-height: 1.5;
+    background: #000;
+    color: rgb(196, 140, 140);
+}
+
+@font-face {
+    font-family: "Segoe UI Light";
+    src: url("fonts/segoeuil.ttf");
+  }
+
+  @font-face {
+    font-family: "Slim Joe";
+    src: url("fonts/Slim Joe.otf");
+  }
+
+  img#zelight{
+    width: 100%;
+    opacity: 0.15;
+    position: fixed;
+    bottom:0;
+    left:0;
+    z-index: -3;
+  }
+
+  img#bg{
+    width:100%;
+    height: 100%;
+    position: fixed;
+    opacity: 0.5;
+    top:0;
+    left:0;
+    z-index: -5;
+  }
+
+  img#light{
+    width: 100%;
+    opacity: 0.5;
+    position: fixed;
+    bottom:0;
+    left:0;
+    z-index: -4;
+  }
+
+  @media (max-width: 1000px){
+    h6{
+      font-size: 1.5em;
+    }
+    .container{
+      padding-top: 50px;
+    }
+  }
